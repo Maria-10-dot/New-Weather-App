@@ -22,8 +22,8 @@ function searchCity(city) {
   console.log(searchInput.value);
   let h2 = document.querySelector("h2");
   h2.innerHTML = `${searchInput.value}`;
-  let apiKey = "cabdbda40038ba7d1165b953b1c7bd6c";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${searchInput.value}&appid=${apiKey}&units=metric`;
+  let apiKey = "bbbe124ec0oeac9atc1f0ad2a9f15a31";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${searchInput.value}&key=${apiKey}`;
   axios.get(apiUrl).then(displayWeather);
 }
 
@@ -37,7 +37,7 @@ function handleSubmit(event) {
 }
 
 function searchLocation(position) {
-  let apiKey = "cabdbda40038ba7d1165b953b1c7bd6c";
+  let apiKey = "bbbe124ec0oeac9atc1f0ad2a9f15a31";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayWeather);
 }
