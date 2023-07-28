@@ -1,51 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
+    <title>Parcel Sandbox</title>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="styles.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
       crossorigin="anonymous"
     />
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    <link href="src/style.css" />
   </head>
+
   <body>
     <div class="container">
       <div class="weather-app">
-        <h1>Weather Forecast</h1>
-        <form id="search-form">
-          <input type="search" id="text-input" placeholder="Type a city" />
-
-          <input type="submit" value="Search" />
-        </form>
-        <h2>Polokwane,South Africa</h2>
-        <ul>
-          <li>Wednesday 15:00</li>
-          <li>Mostly Sunny</li>
-        </ul>
-        <div class="row">
-          <div class="col-6">
-            <img
-              src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
-              alt="Sunny icon"
-            />
-            20 ℃| <a href="#">℉</a>
-            </div>
-    <div class="col-6">
-      <ul>
-        <li>Precipitation: 10%</li>
-        <li>Humidity: 69%</li>
-        <li>Wind: 13km/h</li>
-      </ul>
+      <h1>
+        Weather Forecast
+      </h1>
+          <form class="search-form" id="search-form">
+            <input type="search" id="search-text-input" placeholder="Type a city"/>
+            <input type="submit" value="search"
+            id="city-input">
+          </form>
+        <h2 id="city">
+        </h2>
+          <ul>
+            <li id="current-date"
+          <li id="description">
+          </li>
+          </ul>
+<div class="row">
+  <div class="col-6">
+    <div class="clearfix">   
+       <img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" alt="sunny" 
+       div class="weather- icon float-left"/>
+       <span class="temperature" id="temperature"> 20</span> <span class="units"> <a href="#" id="cLink"> ℃ </a> | <a href="#" id="fLink">℉ </a></span>
+      </div>
     </div>
-    <script src="index.js"></script>
+  </div>
+  </div>
+</div>
+  <div class="col-6">
+      <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+          <button type="button" class="btn btn-warning" >Humidity: <span id="humidity"></span> %</button>
+          <button type="button" class="btn btn-primary">wind: <span id="wind"></span>km/h</button>
+              <button type="button" class="btn btn-success" id="current-location">Current Location</button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-2">Wed <br>🌞 <br> 24°/7°
+            </div>
+          <div class="col-2">Thu <br> 🌞 <br> 25°/8°
+              </div>
+            <div class="col-2">Fri <br> 🌞 <br> 24°/6°
+          </div>
+            <div class="col-2">Sat <br> 🌞 <br> 24°/5°
+            </div>
+            <div class="col-2">Sun 🌞 <br> 26°/5°</p>
+              </div>
+        </div>
+    <script src="src/app.js"></script>
   </body>
 </html>
